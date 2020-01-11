@@ -84,11 +84,7 @@ def remove_nodes(cx, cy, rx, ry, temp):
     end_x = min(int(cx + rx) + 1, temp.shape[1]-1)
     start_y = max(int(cy - ry)-1,0)
     end_y = min(int(cy + ry)+1, temp.shape[0]-1)
-    for i in range(start_y,end_y):
-        for j in range(start_x,end_x):
-            if (i - cy)**2/ry**2 + (j - cx)**2/rx**2 <= 1.0: 
-                image_array[i][j] = True
-    # image_array[start_y:end_y, start_x:end_x] = True
+    image_array[start_y:end_y, start_x:end_x] = True
     return image_array
 def offsetEquation(graphY):
     return int(graphY * 96 + 5.5)
