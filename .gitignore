@@ -1,6 +1,8 @@
+.DS_Store
 data/data/
 data/descriptions/
 data/graph_images/
 data/edge_data/
 data/plain_data/
+data/mask_data/
 data/__pycache__/
