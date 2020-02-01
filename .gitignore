@@ -6,3 +6,5 @@ data/edge_data/
 data/plain_data/
 data/mask_data/
 data/__pycache__/
+data/.ipynb_checkpoints/
+ocr/TPS-ResNet-BiLSTM-Attn.pth

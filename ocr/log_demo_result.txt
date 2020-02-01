@@ -1,0 +1,253 @@
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+demo_image/demo_1.png    	available                	0.9999
+demo_image/demo_2.jpg    	shakeshack               	0.9263
+demo_image/demo_3.png    	london                   	0.9878
+demo_image/demo_4.png    	greenstead               	0.9984
+demo_image/demo_5.png    	toast                    	0.9963
+demo_image/demo_6.png    	merry                    	0.9977
+demo_image/demo_7.png    	underground              	1.0000
+demo_image/demo_8.jpg    	ronaldo                  	0.8412
+demo_image/demo_9.jpg    	bally                    	0.7815
+demo_image/demo_10.jpg   	university               	0.9998
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+demo_image/slightboarder.png	adenocelest              	0.0810
+demo_image/testReshape.png	adenocele                	0.9987
+demo_image/word.png      	adenocele                	0.9987
+demo_image/wordBoarders.png	cadenocally              	0.0064
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+demo_image/351.png       	chear                    	0.0055
+demo_image/slightboarder.png	adenocelest              	0.0810
+demo_image/testReshape.png	adenocele                	0.9987
+demo_image/word.png      	adenocele                	0.9987
+demo_image/wordBoarders.png	cadenocally              	0.0064
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+demo_image/351.png       	chear                    	0.0055
+demo_image/Screen Shot 2020-01-31 at 6.19.08 PM.png	herati                   	0.2491
+demo_image/slightboarder.png	adenocelest              	0.0810
+demo_image/testReshape.png	adenocele                	0.9987
+demo_image/word.png      	adenocele                	0.9987
+demo_image/wordBoarders.png	cadenocally              	0.0064
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+demo_image/351.png       	chear                    	0.0055
+demo_image/slightboarder.png	adenocelest              	0.0810
+demo_image/test1.png     	herati                   	0.2491
+demo_image/test2.png     	heratic                  	0.1333
+demo_image/test3.png     	herate                   	0.4014
+demo_image/testReshape.png	adenocele                	0.9987
+demo_image/word.png      	adenocele                	0.9987
+demo_image/wordBoarders.png	cadenocally              	0.0064
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+demo_image/351.png       	chear                    	0.0055
+demo_image/Screen Shot 2020-01-31 at 6.21.52 PM.png	herat                    	0.9999
+demo_image/slightboarder.png	adenocelest              	0.0810
+demo_image/test1.png     	herati                   	0.2491
+demo_image/test2.png     	heratic                  	0.1333
+demo_image/test3.png     	herate                   	0.4014
+demo_image/testReshape.png	adenocele                	0.9987
+demo_image/word.png      	adenocele                	0.9987
+demo_image/wordBoarders.png	cadenocally              	0.0064
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+demo_image/351.png       	chear                    	0.0055
+demo_image/herat.png     	herat                    	0.9999
+demo_image/slightboarder.png	adenocelest              	0.0810
+demo_image/test1.png     	herati                   	0.2491
+demo_image/test2.png     	heratic                  	0.1333
+demo_image/test3.png     	herate                   	0.4014
+demo_image/testReshape.png	adenocele                	0.9987
+demo_image/word.png      	adenocele                	0.9987
+demo_image/wordBoarders.png	cadenocally              	0.0064
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+demo_image/351.png       	chear                    	0.0055
+demo_image/Screen Shot 2020-01-31 at 6.23.25 PM.png	universal                	0.9993
+demo_image/herat.png     	herat                    	0.9999
+demo_image/slightboarder.png	adenocelest              	0.0810
+demo_image/test1.png     	herati                   	0.2491
+demo_image/test2.png     	heratic                  	0.1333
+demo_image/test3.png     	herate                   	0.4014
+demo_image/testReshape.png	adenocele                	0.9987
+demo_image/word.png      	adenocele                	0.9987
+demo_image/wordBoarders.png	cadenocally              	0.0064
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+demo_image/351.png       	chear                    	0.0055
+demo_image/herat.png     	herat                    	0.9999
+demo_image/slightboarder.png	adenocelest              	0.0810
+demo_image/test1.png     	herati                   	0.2491
+demo_image/test2.png     	heratic                  	0.1333
+demo_image/test3.png     	herate                   	0.4014
+demo_image/testReshape.png	adenocele                	0.9987
+demo_image/universal.png 	universal                	0.9993
+demo_image/word.png      	adenocele                	0.9987
+demo_image/wordBoarders.png	cadenocally              	0.0064
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+demo_image/351.png       	chear                    	0.0055
+demo_image/herat.png     	herat                    	0.9999
+demo_image/jurrasicPark.png	jurassicpark             	0.9734
+demo_image/slightboarder.png	adenocelest              	0.0810
+demo_image/test1.png     	herati                   	0.2491
+demo_image/test2.png     	heratic                  	0.1333
+demo_image/test3.png     	herate                   	0.4014
+demo_image/testReshape.png	adenocele                	0.9987
+demo_image/universal.png 	universal                	0.9993
+demo_image/word.png      	adenocele                	0.9987
+demo_image/wordBoarders.png	cadenocally              	0.0064
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+demo_image/351.png       	chear                    	0.0055
+demo_image/herat.png     	herat                    	0.9999
+demo_image/jurassicParkLine.png	jurasscork               	0.1408
+demo_image/jurrasicPark.png	jurassicpark             	0.9734
+demo_image/slightboarder.png	adenocelest              	0.0810
+demo_image/test1.png     	herati                   	0.2491
+demo_image/test2.png     	heratic                  	0.1333
+demo_image/test3.png     	herate                   	0.4014
+demo_image/testReshape.png	adenocele                	0.9987
+demo_image/universal.png 	universal                	0.9993
+demo_image/word.png      	adenocele                	0.9987
+demo_image/wordBoarders.png	cadenocally              	0.0064
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+demo_image/351.png       	chear                    	0.0055
+demo_image/Screen Shot 2020-01-31 at 6.46.08 PM.png	mathcamp                 	0.9390
+demo_image/herat.png     	herat                    	0.9999
+demo_image/jurassicParkLine.png	jurasscork               	0.1408
+demo_image/jurrasicPark.png	jurassicpark             	0.9734
+demo_image/slightboarder.png	adenocelest              	0.0810
+demo_image/test1.png     	herati                   	0.2491
+demo_image/test2.png     	heratic                  	0.1333
+demo_image/test3.png     	herate                   	0.4014
+demo_image/testReshape.png	adenocele                	0.9987
+demo_image/universal.png 	universal                	0.9993
+demo_image/word.png      	adenocele                	0.9987
+demo_image/wordBoarders.png	cadenocally              	0.0064
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+demo_image/351.png       	chear                    	0.0055
+demo_image/herat.png     	herat                    	0.9999
+demo_image/jurassicParkLine.png	jurasscork               	0.1408
+demo_image/jurrasicPark.png	jurassicpark             	0.9734
+demo_image/mathcamp.png  	mathcamp                 	0.9390
+demo_image/slightboarder.png	adenocelest              	0.0810
+demo_image/test1.png     	herati                   	0.2491
+demo_image/test2.png     	heratic                  	0.1333
+demo_image/test3.png     	herate                   	0.4014
+demo_image/testReshape.png	adenocele                	0.9987
+demo_image/universal.png 	universal                	0.9993
+demo_image/word.png      	adenocele                	0.9987
+demo_image/wordBoarders.png	cadenocally              	0.0064
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+demo_image/351.png       	chear                    	0.0055
+demo_image/herat.png     	herat                    	0.9999
+demo_image/jurassicParkLine.png	jurasscork               	0.1408
+demo_image/jurrasicPark.png	jurassicpark             	0.9734
+demo_image/mathcamp.png  	mathcamp                 	0.9390
+demo_image/pokemon.png   	pychon                   	0.3680
+demo_image/slightboarder.png	adenocelest              	0.0810
+demo_image/test1.png     	herati                   	0.2491
+demo_image/test2.png     	heratic                  	0.1333
+demo_image/test3.png     	herate                   	0.4014
+demo_image/testReshape.png	adenocele                	0.9987
+demo_image/universal.png 	universal                	0.9993
+demo_image/word.png      	adenocele                	0.9987
+demo_image/wordBoarders.png	cadenocally              	0.0064
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+demo_image/351.png       	chear                    	0.0055
+demo_image/herat.png     	herat                    	0.9999
+demo_image/jurassicParkLine.png	jurasscork               	0.1408
+demo_image/jurrasicPark.png	jurassicpark             	0.9734
+demo_image/mathcamp.png  	mathcamp                 	0.9390
+demo_image/pokemon.png   	pychon                   	0.3680
+demo_image/pokemon_noHyphen.png	porchov                  	0.2725
+demo_image/slightboarder.png	adenocelest              	0.0810
+demo_image/test1.png     	herati                   	0.2491
+demo_image/test2.png     	heratic                  	0.1333
+demo_image/test3.png     	herate                   	0.4014
+demo_image/testReshape.png	adenocele                	0.9987
+demo_image/universal.png 	universal                	0.9993
+demo_image/word.png      	adenocele                	0.9987
+demo_image/wordBoarders.png	cadenocally              	0.0064
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+demo_image/351.png       	chear                    	0.0055
+demo_image/Disney.png    	drnep                    	0.2381
+demo_image/herat.png     	herat                    	0.9999
+demo_image/jurassicParkLine.png	jurasscork               	0.1408
+demo_image/jurrasicPark.png	jurassicpark             	0.9734
+demo_image/mathcamp.png  	mathcamp                 	0.9390
+demo_image/pokemon.png   	pychon                   	0.3680
+demo_image/pokemon_noHyphen.png	porchov                  	0.2725
+demo_image/slightboarder.png	adenocelest              	0.0810
+demo_image/test1.png     	herati                   	0.2491
+demo_image/test2.png     	heratic                  	0.1333
+demo_image/test3.png     	herate                   	0.4014
+demo_image/testReshape.png	adenocele                	0.9987
+demo_image/universal.png 	universal                	0.9993
+demo_image/word.png      	adenocele                	0.9987
+demo_image/wordBoarders.png	cadenocally              	0.0064
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+demo_image/351.png       	chear                    	0.0055
+demo_image/Disney.png    	drnep                    	0.2381
+demo_image/GetaWayBlast.png	getaway                  	0.9864
+demo_image/herat.png     	herat                    	0.9999
+demo_image/jurassicParkLine.png	jurasscork               	0.1408
+demo_image/jurrasicPark.png	jurassicpark             	0.9734
+demo_image/mathcamp.png  	mathcamp                 	0.9390
+demo_image/pokemon.png   	pychon                   	0.3680
+demo_image/pokemon_noHyphen.png	porchov                  	0.2725
+demo_image/slightboarder.png	adenocelest              	0.0810
+demo_image/test1.png     	herati                   	0.2491
+demo_image/test2.png     	heratic                  	0.1333
+demo_image/test3.png     	herate                   	0.4014
+demo_image/testReshape.png	adenocele                	0.9987
+demo_image/universal.png 	universal                	0.9993
+demo_image/word.png      	adenocele                	0.9987
+demo_image/wordBoarders.png	cadenocally              	0.0064
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+demo_image/351.png       	chear                    	0.0055
+demo_image/Disney.png    	drnep                    	0.2381
+demo_image/GetaWayBlast.png	getaway                  	0.9864
+demo_image/herat.png     	herat                    	0.9999
+demo_image/jurassicParkLine.png	jurasscork               	0.1408
+demo_image/jurrasicPark.png	jurassicpark             	0.9734
+demo_image/mathcamp.png  	mathcamp                 	0.9390
+demo_image/pokemon.png   	pychon                   	0.3680
+demo_image/pokemon_noHyphen.png	porchov                  	0.2725
+demo_image/slightboarder.png	adenocelest              	0.0810
+demo_image/test1.png     	herati                   	0.2491
+demo_image/test2.png     	heratic                  	0.1333
+demo_image/test3.png     	herate                   	0.4014
+demo_image/testReshape.png	adenocele                	0.9987
+demo_image/universal.png 	universal                	0.9993
+demo_image/word.png      	adenocele                	0.9987
+demo_image/wordBoarders.png	cadenocally              	0.0064
