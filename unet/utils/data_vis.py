@@ -4,6 +4,7 @@ import numpy as np
 import cv2
 from utils.dataset import BasicDataset
 import sys
+import os
 
 def isSafe(mask, i, j, visited):
         # row number is in range, column number
@@ -215,8 +216,18 @@ def plot_img_and_mask(img, mask):
     # Save images
     for iter, island in enumerate(islands_eroded):
         (left_coord,right_coord, top_coord, bot_coord) = island
-        box = letters[top_coord:bot_coord,left_coord:right_coord]
-        plt.imsave("temp" + str(iter) + ".png",box,cmap='gray')
+        box = letters[top_coord+10:bot_coord-10,left_coord+10:right_coord-10]
+        box = cv2.resize(box,(500,255))
+        plt.imsave("../ocr/demo_image/" + str(iter) + ".png",box,cmap='gray')
+
+    os.system("python ../ocr/demo.py --Transformation TPS --FeatureExtraction ResNet --SequenceModeling \
+                BiLSTM --Prediction Attn --image_folder ../ocr/demo_image/ --saved_model ../ocr/TPS-ResNet-BiLSTM-Attn.pth")
+    log = open(f'./log_demo_result.txt', 'r')
+    node_name_dict = {}
+    for line in log:
+        img_name = int(line.split()[0].split("/")[-1].split(".")[0])
+        node_name = line.split()[1]
+        node_name_dict[img_name] = node_name
 
     visited = [[False for j in range(node_edge.shape[1])]for i in range(node_edge.shape[0])]
     # print(islands)
@@ -236,7 +247,7 @@ def plot_img_and_mask(img, mask):
             node_edge_copy = cv2.rectangle(node_edge_copy,(y1,x1),(y2,x2),127,1)
         # print(iter)
         # print(islands_numbered)
-    ax[i+1].imshow(node_edge_copy,cmap='gray')
+    # ax[i+1].imshow(node_edge_copy,cmap='gray')
 
     #Check the direction of the connection between 2 nodes
     for i in range(len(islands_copy)):
@@ -247,8 +258,9 @@ def plot_img_and_mask(img, mask):
 
     #Print the graph
     for i in range(len(islands_copy)):
-        print(i)
-        print(np.where(graph[i]==1))
+        for j in range(len(islands_copy)):
+            if graph[i][j] == 1:
+                print(node_name_dict[i]+","+node_name_dict[j])
 
     plt.xticks([]), plt.yticks([])
-    plt.show()
+    # plt.show()

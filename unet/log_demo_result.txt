@@ -1,0 +1,3 @@
+../ocr/demo_image/0.png   quadrireme               
+../ocr/demo_image/1.png   taum                     
+../ocr/demo_image/2.png   unlugubrious             
