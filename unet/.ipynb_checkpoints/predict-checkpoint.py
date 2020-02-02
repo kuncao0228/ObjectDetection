@@ -12,9 +12,6 @@ from unet import UNet
 from utils.data_vis import plot_img_and_mask
 from utils.dataset import BasicDataset
 
-import os
-os.environ['KMP_DUPLICATE_LIB_OK']='True'
-
 
 def predict_img(net,
                 full_img,
@@ -55,7 +52,7 @@ def predict_img(net,
 def get_args():
     parser = argparse.ArgumentParser(description='Predict masks from input images',
                                      formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    parser.add_argument('--model', '-m', default='CP_epoch50.pth',
+    parser.add_argument('--model', '-m', default='checkpoints/CP_epoch5.pth',
                         metavar='FILE',
                         help="Specify the file in which the model is stored")
     parser.add_argument('--input', '-i', metavar='INPUT', nargs='+',
@@ -107,7 +104,7 @@ if __name__ == "__main__":
     in_files = args.input
     out_files = get_output_filenames(args)
 
-    net = UNet(n_channels=3, n_classes=3)
+    net = UNet(n_channels=3, n_classes=1)
 
     logging.info("Loading model {}".format(args.model))
 

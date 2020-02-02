@@ -8,3 +8,4 @@ data/mask_data/
 data/__pycache__/
 data/.ipynb_checkpoints/
 ocr/TPS-ResNet-BiLSTM-Attn.pth
+unet/CP_epoch50.pth

@@ -251,3 +251,48 @@ demo_image/testReshape.png	adenocele                	0.9987
 demo_image/universal.png 	universal                	0.9993
 demo_image/word.png      	adenocele                	0.9987
 demo_image/wordBoarders.png	cadenocally              	0.0064
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+demo_image/83752375_2223840944587317_679919217314627584_n.png	myroconist               	0.0004
+demo_image/83855004_168831204408375_5918657820869263360_n.png	olfacty                  	0.9562
+demo_image/83864279_470859940260790_6697196608355827712_n.png	unterrantially           	0.0229
+demo_image/83903529_489708121953630_1646665262713274368_n.png	farrhanides              	0.0065
+demo_image/84273026_1524441437723753_4479132852247592960_n.png	nizarchism               	0.0036
+demo_image/84333695_2745419795545730_2800219154009817088_n.png	hiclavate                	0.0783
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+demo_image/83725064_2829920453762135_349724180297547776_n.png	counterrestialist        	0.0624
+demo_image/83867372_222154922144550_2695065435342110720_n.png	colfacty                 	0.2695
+demo_image/84525148_767971180364855_5714304793049038848_n.png	pyrocollopical           	0.0028
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+demo_image/83645258_670096313732868_2573265351148044288_n.png	olfacty                  	0.6166
+demo_image/83733707_2503801753222581_6850768107531665408_n.png	unterressirialist        	0.0254
+demo_image/83743604_133781707764732_6402655310338588672_n.png	pyrocotion               	0.4238
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+demo_image/83645258_670096313732868_2573265351148044288_n.png	olfacty                  	0.6166
+demo_image/83733707_2503801753222581_6850768107531665408_n.png	unterressirialist        	0.0254
+demo_image/83743604_133781707764732_6402655310338588672_n.png	pyrocotion               	0.4238
+demo_image/Screen Shot 2020-02-01 at 12.11.08 AM.png	olfacty                  	0.5316
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+demo_image/83645258_670096313732868_2573265351148044288_n.png	olfacty                  	0.6166
+demo_image/83733707_2503801753222581_6850768107531665408_n.png	unterressirialist        	0.0254
+demo_image/83743604_133781707764732_6402655310338588672_n.png	pyrocotion               	0.4238
+demo_image/Screen Shot 2020-02-01 at 12.11.08 AM.png	olfacty                  	0.5316
+demo_image/Screen Shot 2020-02-01 at 12.11.31 AM.png	unterrestrial            	0.9797
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+demo_image/83645258_670096313732868_2573265351148044288_n.png	olfacty                  	0.6166
+demo_image/83733707_2503801753222581_6850768107531665408_n.png	unterressirialist        	0.0254
+demo_image/83743604_133781707764732_6402655310338588672_n.png	pyrocotion               	0.4238
+demo_image/Screen Shot 2020-02-01 at 12.11.08 AM.png	olfacty                  	0.5316
+demo_image/Screen Shot 2020-02-01 at 12.11.31 AM.png	unterrestrial            	0.9797
+demo_image/Screen Shot 2020-02-01 at 12.12.16 AM.png	pyrocotton               	0.9995
