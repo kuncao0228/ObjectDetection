@@ -9,7 +9,7 @@ data/__pycache__/
 data/.ipynb_checkpoints/
 ocr/TPS-ResNet-BiLSTM-Attn.pth
 unet/CP_epoch50.pth
-
+unet/checkpoints/
 # Byte-compiled / optimized / DLL files
 __pycache__/*
 */__pycache__/
