@@ -11,10 +11,7 @@ import pdb
 from unet import UNet
 from utils.data_vis import plot_img_and_mask
 from utils.dataset import BasicDataset
-
-import os
-os.environ['KMP_DUPLICATE_LIB_OK']='True'
-
+import cv2
 
 def predict_img(net,
                 full_img,
@@ -55,7 +52,7 @@ def predict_img(net,
 def get_args():
     parser = argparse.ArgumentParser(description='Predict masks from input images',
                                      formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    parser.add_argument('--model', '-m', default='CP_epoch50.pth',
+    parser.add_argument('--model', '-m', default='checkpoints/CP_epoch50.pth',
                         metavar='FILE',
                         help="Specify the file in which the model is stored")
     parser.add_argument('--input', '-i', metavar='INPUT', nargs='+',
@@ -122,7 +119,7 @@ if __name__ == "__main__":
         logging.info("\nPredicting image {} ...".format(fn))
 
         img = Image.open(fn)
-
+        img1 = cv2.imread(fn,0)
         mask = predict_img(net=net,
                            full_img=img,
                            scale_factor=args.scale,
@@ -138,4 +135,4 @@ if __name__ == "__main__":
 
         if args.viz:
             logging.info("Visualizing results for image {}, close to continue ...".format(fn))
-            plot_img_and_mask(img, mask)
+            plot_img_and_mask(img1, mask)
