@@ -1,5 +1,7 @@
-../ocr/demo_image/0.png   myocardium               
-../ocr/demo_image/1.png   roxburghiaceac           
-../ocr/demo_image/2.png   feasor                   
-../ocr/demo_image/3.png   faintful                 
-../ocr/demo_image/4.png   probargaining            
+../ocr/demo_image/0.png   potpourri                
+../ocr/demo_image/1.png   percompound              
+../ocr/demo_image/2.png   argyrocephalous          
+../ocr/demo_image/3.png   prebelieving             
+../ocr/demo_image/4.png   neurocirculatory         
+../ocr/demo_image/5.png   helianthic               
+../ocr/demo_image/6.png   libitina                 

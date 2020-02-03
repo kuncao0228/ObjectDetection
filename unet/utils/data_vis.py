@@ -250,17 +250,19 @@ def plot_img_and_mask(img, mask):
     # ax[i+1].imshow(node_edge_copy,cmap='gray')
 
     #Check the direction of the connection between 2 nodes
+
+
     for i in range(len(islands_copy)):
         for j in range(len(islands_copy)):
             if graph[i][j]>0 and graph[i][j]>=graph[j][i]:
                 graph[j][i]=0
                 graph[i][j]=1
 
-    #Print the graph
-    for i in range(len(islands_copy)):
-        for j in range(len(islands_copy)):
+
+    for i in range(len(node_name_dict)):
+        for j in range(len(node_name_dict)):
             if graph[i][j] == 1:
                 print(node_name_dict[i]+","+node_name_dict[j])
 
-    plt.xticks([]), plt.yticks([])
+    # plt.xticks([]), plt.yticks([])
     # plt.show()
