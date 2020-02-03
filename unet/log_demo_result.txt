@@ -1,3 +1,5 @@
-../ocr/demo_image/0.png   quadrireme               
-../ocr/demo_image/1.png   taum                     
-../ocr/demo_image/2.png   unlugubrious             
+../ocr/demo_image/0.png   myocardium               
+../ocr/demo_image/1.png   roxburghiaceac           
+../ocr/demo_image/2.png   feasor                   
+../ocr/demo_image/3.png   faintful                 
+../ocr/demo_image/4.png   probargaining            

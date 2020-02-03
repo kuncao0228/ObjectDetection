@@ -16,8 +16,10 @@ __pycache__/*
 */*/__pycache__/
 *.pyc
 *.py[cod]
+*.pth
+*.png
 *$py.class
-
+unet/checkpoints/
 # C extensions
 *.so
 

@@ -1,0 +1,1 @@
+python predict.py -i ../data/data/..... -v
