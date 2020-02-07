@@ -1,4 +1,6 @@
 .DS_Store
+ocr/demo_image/
+unet/data/
 data/data/
 data/descriptions/
 data/graph_images/

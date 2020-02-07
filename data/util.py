@@ -52,6 +52,50 @@ def createGraph(word_list, file_id):
     #create plain graph
     plain_graph.render('plain_data/' + str(file_id), view=False)  
 
+def createPetri(word_list, file_id):
+    createEdgeProbability = .4
+    diGraph = Digraph(format='png')
+    id_list = []
+    #create nodes for words
+    for i in range(len(word_list)):
+        diGraph.node(str(i), word_list[i])
+        id_list.append(i)
+    edge_hashList = []
+    pair_wordList = []
+
+    #create edges between nodes with some probability
+    if len(id_list) > 1:
+        for i in range(len(id_list)):
+            for j in range(len(id_list)):
+                reverse_edgeID = str(j) + str(i)
+                current_edgeID = str(i) + str(j)
+                words = word_list[i] + " to " + word_list[j]
+                if i != j and np.random.uniform() > createEdgeProbability:
+                    edge_hashList.append(current_edgeID)
+                    pair_wordList.append(words)
+    diGraph.edges(edge_hashList)
+
+    #create plainText
+    plain_graph = Digraph(format='plain')
+    for i in range(len(word_list)):
+        plain_graph.node(str(i), word_list[i])
+        id_list.append(i)
+
+    plain_graph.edges(edge_hashList)
+
+
+    f = open('descriptions/' + str(file_id) + ".txt", "w")
+    for i in pair_wordList:
+        f.write(i)
+        f.write("\n")
+    f.close()
+
+    
+    #create graph image
+    diGraph.render('data/' + str(file_id), view=False)  
+
+    #create plain graph
+    plain_graph.render('plain_data/' + str(file_id), view=False) 
 
 def offsetEquation(graphY):
     return int(graphY * 96 + 5.5)

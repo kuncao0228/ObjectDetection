@@ -1,7 +1,8 @@
-../ocr/demo_image/0.png   potpourri                
-../ocr/demo_image/1.png   percompound              
-../ocr/demo_image/2.png   argyrocephalous          
-../ocr/demo_image/3.png   prebelieving             
-../ocr/demo_image/4.png   neurocirculatory         
-../ocr/demo_image/5.png   helianthic               
-../ocr/demo_image/6.png   libitina                 
+../ocr/demo_image/0.png   uncrushable              
+../ocr/demo_image/1.png   populously               
+../ocr/demo_image/2.png   algorism                 
+../ocr/demo_image/3.png   debilissima              
+../ocr/demo_image/4.png   adnascence               
+../ocr/demo_image/5.png   inferiorize              
+../ocr/demo_image/6.png   maranha                  
+../ocr/demo_image/7.png   casabe                   

@@ -13,6 +13,8 @@ from unet import UNet
 from utils.data_vis import plot_img_and_mask
 from utils.dataset import BasicDataset
 import cv2
+import glob
+from tqdm import tqdm
 
 def predict_img(net,
                 full_img,
@@ -66,7 +68,7 @@ def get_args():
                         default=False)
     parser.add_argument('--no-save', '-n', action='store_true',
                         help="Do not save the output masks",
-                        default=False)
+                        default=True)
     parser.add_argument('--mask-threshold', '-t', type=float,
                         help="Minimum probability value to consider a mask pixel white",
                         default=0.5)
@@ -99,10 +101,13 @@ def mask_to_image(mask):
     # return Image.fromarray(mask)
     return Image.fromarray((mask[2,:,:] * 255).astype(np.uint8))
 
+def get_pngs(input):
+    return glob.glob(input+'/*.png')
 
 if __name__ == "__main__":
     args = get_args()
-    in_files = args.input
+    in_files = get_pngs(args.input[0])
+    print(in_files)
     out_files = get_output_filenames(args)
 
     net = UNet(n_channels=3, n_classes=3)
@@ -116,7 +121,8 @@ if __name__ == "__main__":
 
     logging.info("Model loaded !")
 
-    for i, fn in enumerate(in_files):
+    correct = 0
+    for i, fn in enumerate(tqdm(in_files)):
         logging.info("\nPredicting image {} ...".format(fn))
 
         img = Image.open(fn)
@@ -134,6 +140,10 @@ if __name__ == "__main__":
 
             logging.info("Mask saved to {}".format(out_files[i]))
 
-        if args.viz:
-            logging.info("Visualizing results for image {}, close to continue ...".format(fn))
-            plot_img_and_mask(img1, mask)
+        logging.info("Visualizing results for image {}, close to continue ...".format(fn))
+        try:
+            correct += plot_img_and_mask(img1, mask, fn)
+        except:
+            continue
+
+    print("Accuracy:"+str(100*correct/(i+1))+"%")
