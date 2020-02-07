@@ -113,8 +113,9 @@ def train_net(net,
                         writer.add_images('masks/true', batch['mask'], global_step)
                         masks_prob = torch.nn.functional.softmax(masks_pred, dim=1)
                         writer.add_images('masks/pred_bg', (masks_prob[:,2,:,:]>0.5)[:,None,:,:], global_step)
-                        writer.add_images('masks/pred_edge', (masks_prob[:,1,:,:]>0.5)[:,None,:,:], global_step)
-                        writer.add_images('masks/pred_node', (masks_prob[:,0,:,:]>0.5)[:,None,:,:], global_step)
+                        writer.add_images('masks/pred_node', (masks_prob[:,1,:,:]>0.5)[:,None,:,:], global_step)
+                        writer.add_images('masks/pred_box', (masks_prob[:,0,:,:]>0.5)[:,None,:,:], global_step)
+                        writer.add_images('masks/pred_edge', (masks_prob[:,4,:,:]>0.5)[:,None,:,:], global_step)
 
         if save_cp:
             try:
@@ -160,7 +161,7 @@ if __name__ == '__main__':
     #   - For 1 class and background, use n_classes=1
     #   - For 2 classes, use n_classes=1
     #   - For N > 2 classes, use n_classes=N
-    net = UNet(n_channels=3, n_classes=3)
+    net = UNet(n_channels=3, n_classes=4)
     logging.info(f'Network:\n'
                  f'\t{net.n_channels} input channels\n'
                  f'\t{net.n_classes} output channels (classes)\n'
