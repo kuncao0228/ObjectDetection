@@ -5,6 +5,9 @@ from glob import glob
 import torch
 from torch.utils.data import Dataset
 import logging
+import pdb
+import cv2
+import matplotlib.pyplot as plt
 from PIL import Image
 
 
@@ -33,6 +36,7 @@ class BasicDataset(Dataset):
         img_nd = np.array(pil_img)
         if len(img_nd.shape)>2:
             img_nd = img_nd[:,:,:channels]
+
         if len(img_nd.shape) == 2:
             img_nd = np.expand_dims(img_nd, axis=2)
 
@@ -45,20 +49,25 @@ class BasicDataset(Dataset):
 
     def __getitem__(self, i):
         idx = self.ids[i]
-        mask_file = glob(self.masks_dir + idx + '.png')
+        mask_file = glob(self.masks_dir + idx + '.npy')
         img_file = glob(self.imgs_dir + idx + '.png')
 
         assert len(mask_file) == 1, \
             f'Either no mask or multiple masks found for the ID {idx}: {mask_file}'
         assert len(img_file) == 1, \
             f'Either no image or multiple images found for the ID {idx}: {img_file}'
-        mask = Image.open(mask_file[0])
+        # mask = Image.open(mask_file[0])
         img = Image.open(img_file[0])
 
-        assert img.size == mask.size, \
-            f'Image and mask {idx} should be the same size, but are {img.size} and {mask.size}'
+        # assert img.size == mask.size, \
+        #     f'Image and mask {idx} should be the same size, but are {img.size} and {mask.size}'
 
         img = self.preprocess(img, self.scale)
-        mask = self.preprocess(mask, self.scale, channels=4)
+        mask = np.load(mask_file[0])
+        mask = cv2.resize(mask,(255,255))
+        mask = mask.transpose((2, 0, 1))
+        if mask.max() > 1:
+            mask = mask / 255
+        # mask = self.preprocess(mask, self.scale, channels=4)
 
         return {'image': torch.from_numpy(img), 'mask': torch.from_numpy(mask)}
