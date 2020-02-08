@@ -110,7 +110,7 @@ if __name__ == "__main__":
     print(in_files)
     out_files = get_output_filenames(args)
 
-    net = UNet(n_channels=3, n_classes=3)
+    net = UNet(n_channels=3, n_classes=4)
 
     logging.info("Loading model {}".format(args.model))
 

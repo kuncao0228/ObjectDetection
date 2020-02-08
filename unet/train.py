@@ -115,7 +115,7 @@ def train_net(net,
                         writer.add_images('masks/pred_bg', (masks_prob[:,2,:,:]>0.5)[:,None,:,:], global_step)
                         writer.add_images('masks/pred_node', (masks_prob[:,1,:,:]>0.5)[:,None,:,:], global_step)
                         writer.add_images('masks/pred_box', (masks_prob[:,0,:,:]>0.5)[:,None,:,:], global_step)
-                        writer.add_images('masks/pred_edge', (masks_prob[:,4,:,:]>0.5)[:,None,:,:], global_step)
+                        writer.add_images('masks/pred_edge', (masks_prob[:,3,:,:]>0.5)[:,None,:,:], global_step)
 
         if save_cp:
             try:

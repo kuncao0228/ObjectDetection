@@ -23,7 +23,7 @@ class BasicDataset(Dataset):
         return len(self.ids)
 
     @classmethod
-    def preprocess(cls, pil_img, scale):
+    def preprocess(cls, pil_img, scale,channels=3):
         w, h = pil_img.size
         #newW, newH = int(scale * w), int(scale * h)
         newW, newH = 255, 255
@@ -32,7 +32,7 @@ class BasicDataset(Dataset):
 
         img_nd = np.array(pil_img)
         if len(img_nd.shape)>2:
-            img_nd = img_nd[:,:,:3]
+            img_nd = img_nd[:,:,:channels]
         if len(img_nd.shape) == 2:
             img_nd = np.expand_dims(img_nd, axis=2)
 
@@ -59,6 +59,6 @@ class BasicDataset(Dataset):
             f'Image and mask {idx} should be the same size, but are {img.size} and {mask.size}'
 
         img = self.preprocess(img, self.scale)
-        mask = self.preprocess(mask, self.scale)
+        mask = self.preprocess(mask, self.scale, channels=4)
 
         return {'image': torch.from_numpy(img), 'mask': torch.from_numpy(mask)}
