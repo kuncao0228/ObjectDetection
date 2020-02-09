@@ -16,6 +16,7 @@ import cv2
 import glob
 from tqdm import tqdm
 
+
 def predict_img(net,
                 full_img,
                 device,
@@ -27,7 +28,6 @@ def predict_img(net,
 
     img = img.unsqueeze(0)
     img = img.to(device=device, dtype=torch.float32)
-
     with torch.no_grad():
         output = net(img)
 
@@ -38,17 +38,13 @@ def predict_img(net,
 
         probs = probs.squeeze(0)
 
-        tf = transforms.Compose(
-            [
-                transforms.ToPILImage(),
-                transforms.Resize(full_img.size[1]),
-                transforms.ToTensor()
-            ]
-        )
+        probs = probs.cpu().numpy()
+        probs = np.transpose(probs,(1,2,0))
+        probs = cv2.resize(probs,(img.shape[2],img.shape[3]))
+        probs = np.transpose(probs,(2,0,1))
 
-        probs = tf(probs.cpu())
         # pdb.set_trace()
-        full_mask = probs.squeeze().cpu().numpy()
+        full_mask = probs
     return full_mask > out_threshold
 
 

@@ -1,8 +1,8 @@
-../ocr/demo_image/0.png   uncrushable              
-../ocr/demo_image/1.png   populously               
-../ocr/demo_image/2.png   algorism                 
-../ocr/demo_image/3.png   debilissima              
-../ocr/demo_image/4.png   adnascence               
-../ocr/demo_image/5.png   inferiorize              
-../ocr/demo_image/6.png   maranha                  
-../ocr/demo_image/7.png   casabe                   
+../ocr/demo_image/0.png   linotyper                
+../ocr/demo_image/1.png   halfheartedly            
+../ocr/demo_image/2.png   epickilium               
+../ocr/demo_image/3.png   unsinister               
+../ocr/demo_image/4.png   planeta                  
+../ocr/demo_image/5.png   gascromh                 
+../ocr/demo_image/6.png   concourse                
+../ocr/demo_image/7.png   unelicible               
