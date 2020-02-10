@@ -166,7 +166,7 @@ if __name__ == "__main__":
             correct+=1
 
     filename = (args.input[0]).split("/")[-1]+".txt"
-    file = open(filename, 'w')
+    file = open("results/"+filename, 'w')
 
 
     file.write("Accuracy:"+str(100*correct/(i+1))+"%")
