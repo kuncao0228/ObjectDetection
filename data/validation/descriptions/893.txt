@@ -1,6 +1,0 @@
-bossdom to ribless
-topo to bossdom
-catechizable to bossdom
-topo to ribless
-ribless to catechizable
-topo to catechizable

@@ -1,8 +1,0 @@
-rigorist to subtransparent
-rigorist to trumper
-trumper to subtransparent
-evetide to subtransparent
-bromol to evetide
-bromol to rigorist
-trumper to evetide
-evetide to trumper

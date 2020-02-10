@@ -1,6 +1,0 @@
-unthrowable to petalwise
-unthrowable to bold
-bold to microsporophore
-bold to unthrowable
-microsporophore to petalwise
-microsporophore to bold

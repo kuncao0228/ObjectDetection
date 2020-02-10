@@ -1,6 +1,0 @@
-recon to slatemaker
-strepsinema to recon
-oversimply to strepsinema
-strepsinema to oversimply
-recon to oversimply
-oversimply to recon

@@ -1,8 +1,0 @@
-outcomer to anallantoidean
-cyclope to macrandrous
-outcomer to macrandrous
-floorman to macrandrous
-anallantoidean to macrandrous
-cyclope to anallantoidean
-anallantoidean to cyclope
-macrandrous to outcomer

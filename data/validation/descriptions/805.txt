@@ -1,6 +1,0 @@
-nonfat to pneumorrachis
-nonfat to synochus
-nonfat to nonaffiliated
-synochus to nonfat
-pneumorrachis to nonaffiliated
-nonaffiliated to nonfat
