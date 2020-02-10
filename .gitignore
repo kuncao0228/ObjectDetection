@@ -1,4 +1,6 @@
 .DS_Store
+data/validation
+data/*.zip
 ocr/demo_image/
 unet/data/
 data/data/

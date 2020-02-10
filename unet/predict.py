@@ -11,6 +11,7 @@ from torchvision import transforms
 import pdb
 from unet import UNet
 from utils.data_vis import plot_img_and_mask
+from utils.data_bayes import get_stats
 from utils.dataset import BasicDataset
 import cv2
 import glob
@@ -71,6 +72,7 @@ def get_args():
     parser.add_argument('--scale', '-s', type=float,
                         help="Scale factor for the input images",
                         default=1)
+    parser.add_argument('--petri','-p',default=False)
 
     return parser.parse_args()
 
@@ -118,7 +120,9 @@ if __name__ == "__main__":
     logging.info("Model loaded !")
 
     correct = 0
+    stats = []
     for i, fn in enumerate(tqdm(in_files)):
+        print (fn)
         logging.info("\nPredicting image {} ...".format(fn))
 
         img = Image.open(fn)
@@ -137,9 +141,30 @@ if __name__ == "__main__":
             logging.info("Mask saved to {}".format(out_files[i]))
 
         logging.info("Visualizing results for image {}, close to continue ...".format(fn))
+        print (args.petri)
         try:
-            correct += plot_img_and_mask(img1, mask, fn)
+            if args.petri:
+                correct += plot_img_and_mask(img1, mask, fn)
+            else:
+                print("Here")
+                stats.append(get_stats(img1,mask,fn))
         except:
             continue
+    true_positives = 0
+    total_positives = 0
+    predicted_positives = 0
+    over_ocr_true = 0
+    over_ocr_total = 0
+    for stat in stats:
+        (tp,tp_fn,tp_fp,ocr_true,ocr_total) = stat
+        true_positives+=tp
+        total_positives+=tp_fn
+        predicted_positives+=tp_fp
+        over_ocr_true += ocr_true
+        over_ocr_total += ocr_total
+
 
     print("Accuracy:"+str(100*correct/(i+1))+"%")
+    print("Precision:"+str(100*true_positives/(predicted_positives))+"%")
+    print("Recall:"+str(100*true_positives/(total_positives))+"%")
+    print("Ocr_accuracy:"+str(100*over_ocr_true/(over_ocr_total))+"%")

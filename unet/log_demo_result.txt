@@ -1,5 +1,5 @@
-../ocr/demo_image/0.png   linotyper                
-../ocr/demo_image/1.png   halfheartedly            
+../ocr/demo_image/0.png   phonetical               
+../ocr/demo_image/1.png   undergamekeeper          
 ../ocr/demo_image/2.png   epickilium               
 ../ocr/demo_image/3.png   unsinister               
 ../ocr/demo_image/4.png   planeta                  
