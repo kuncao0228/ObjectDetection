@@ -162,9 +162,16 @@ if __name__ == "__main__":
         predicted_positives+=tp_fp
         over_ocr_true += ocr_true
         over_ocr_total += ocr_total
+        if tp==tp_fn and tp==tp_fp:
+            correct+=1
+
+    filename = (args.input[0]).split("/")[-1]+".txt"
+    file = open(filename, 'w')
 
 
-    print("Accuracy:"+str(100*correct/(i+1))+"%")
-    print("Precision:"+str(100*true_positives/(predicted_positives))+"%")
-    print("Recall:"+str(100*true_positives/(total_positives))+"%")
-    print("Ocr_accuracy:"+str(100*over_ocr_true/(over_ocr_total))+"%")
+    file.write("Accuracy:"+str(100*correct/(i+1))+"%")
+    file.write("Precision:"+str(100*true_positives/(predicted_positives))+"%")
+    file.write("Recall:"+str(100*true_positives/(total_positives))+"%")
+    file.write("Ocr_accuracy:"+str(100*over_ocr_true/(over_ocr_total))+"%")
+
+    file.close()

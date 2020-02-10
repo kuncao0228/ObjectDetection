@@ -202,7 +202,7 @@ def dfs_island_check(mask, img, island, islands, in_type):
                 ,s[1]-box_radius,s[1]+box_radius))
             for k in range(8):
                 if isSafe(mask, s[0] + rowNbr[k], s[1] + colNbr[k], visited):
-                    elem_in_islands, island_found = check_element(s[0] + rowNbr[k],s[1] + colNbr[k], islands_copy, radius =1.1, in_type=in_type)
+                    elem_in_islands, island_found = check_element(s[0] + rowNbr[k],s[1] + colNbr[k], islands_copy, radius =1.11, in_type=in_type)
                     # Add to stack if not reached another node
                     if not elem_in_islands:
                         stack.append(((s[0] + rowNbr[k], s[1] + colNbr[k]),[rowNbr[k],colNbr[k]]))
@@ -250,12 +250,15 @@ def countIslands(mask, threshold):
     # given matrix
     count = 0
     islands = []
+    mask_copy = mask.copy()
+    mask_copy[mask_copy>127] = 255
+    mask_copy[mask_copy<127] = 0
     for i in range(mask.shape[0]):
         for j in range(mask.shape[1]):
             # If a cell with value 1 is not visited yet,
             # then new island found
-            if visited[i][j] == False and mask[i][j] == 255:
-                coord = DFS(mask, i, j, visited, threshold)
+            if visited[i][j] == False and mask_copy[i][j] == 255:
+                coord = DFS(mask_copy, i, j, visited, threshold)
                 if coord is not None:
                     islands.append(coord)
 
@@ -322,10 +325,10 @@ def get_stats(img, mask, fn):
     mask_box_dilate = cv2.dilate(mask_box, kernel_erosion, iterations=2)
     mask_box_dilate = cv2.resize(mask_box_dilate,(img.shape[1],img.shape[0]))
     islands_box_dilated = countIslands(mask_box_dilate, threshold)
-
+    islands_box_dilated = []#For Bayes Net no box needed
     mask_ellipse_dilate = cv2.dilate(mask_ellipse, kernel_erosion, iterations=2)
     mask_ellipse_dilate = cv2.resize(mask_ellipse_dilate,(img.shape[1],img.shape[0]))
-    islands_ellipse_dilated = countIslands(mask_ellipse_dilate, threshold)
+    islands_ellipse_dilated = countIslands(mask_box_dilate+mask_ellipse_dilate, threshold)
     # islands_eroded = countIslands(mask_draw_erode, threshold)
 
     #Get nodes+edges
@@ -357,11 +360,15 @@ def get_stats(img, mask, fn):
     # plt.show()
     for iter, island in enumerate(islands_box_dilated+islands_ellipse_dilated):
         (left_coord,right_coord, top_coord, bot_coord) = island
+        width = right_coord - left_coord
+        height = bot_coord - top_coord
         # print(island)
-        box = letters[top_coord+15:bot_coord-15,left_coord+15:right_coord-15]
+        box = letters[top_coord+int(0.2*height):bot_coord-int(0.2*height),left_coord+int(0.2*width):right_coord-int(0.2*width)]
         box = cv2.resize(box,(500,255))
         plt.imsave("../ocr/demo_image/" + str(iter) + ".png",box,cmap='gray')
 
+    ax[1].imshow(letters,cmap='gray')
+    ax[2].imshow(mask_box_dilate+mask_ellipse_dilate,cmap='gray')
     os.system("python ../ocr/demo.py --Transformation TPS --FeatureExtraction ResNet --SequenceModeling \
                 BiLSTM --Prediction Attn --image_folder ../ocr/demo_image/ --saved_model ../ocr/TPS-ResNet-BiLSTM-Attn.pth")
     log = open(f'./log_demo_result.txt', 'r')
@@ -402,14 +409,14 @@ def get_stats(img, mask, fn):
             print(box)
             (x1,x2,y1,y2) = box
             node_edge_copy = cv2.rectangle(node_edge_copy,(y1,x1),(y2,x2),color)
-        if iter==3:
+        if iter==5:
             for point in points:
                 node_edge_copy[point[0],point[1]] = 127
         print(iter)
         print(islands_numbered)
     ax[i].imshow(edges,cmap='gray')
-    ax[i+1].imshow(node_edge_copy,cmap='gray')
-
+    ax[3].imshow(node_edge_copy,cmap='gray')
+    # plt.show()
     # plt.xticks([]), plt.yticks([])
     # plt.show()
 
