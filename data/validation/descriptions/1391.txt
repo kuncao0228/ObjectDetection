@@ -1,0 +1,8 @@
+sty to ecclesioclastic
+intramarginal to overluxuriant
+ecclesioclastic to intramarginal
+sty to educated
+sty to overluxuriant
+educated to ecclesioclastic
+ecclesioclastic to educated
+intramarginal to sty

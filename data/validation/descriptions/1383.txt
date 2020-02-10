@@ -1,0 +1,8 @@
+telt to hircocervus
+telt to coregonine
+hircocervus to subphylar
+hircocervus to salangane
+coregonine to hircocervus
+salangane to telt
+hircocervus to telt
+ophidioid to hircocervus

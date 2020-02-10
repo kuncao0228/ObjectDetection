@@ -1,0 +1,8 @@
+verminal to uncontinuous
+pennyleaf to xenogenesis
+pennyleaf to verminal
+miothermic to xenogenesis
+uncontinuous to miothermic
+underscript to verminal
+verminal to miothermic
+xenogenesis to underscript

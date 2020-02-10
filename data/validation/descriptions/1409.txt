@@ -1,0 +1,15 @@
+camphocarboxylic to depositation
+depositation to coupe
+coupe to Threskiornithidae
+frondent to coupe
+camphocarboxylic to Threskiornithidae
+depositation to shoplifting
+Threskiornithidae to depositation
+frondent to camphocarboxylic
+frondent to Threskiornithidae
+depositation to frondent
+coupe to shoplifting
+shoplifting to Threskiornithidae
+shoplifting to coupe
+depositation to camphocarboxylic
+frondent to depositation

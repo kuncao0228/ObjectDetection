@@ -1,0 +1,6 @@
+outimage to perienteron
+spirituousness to perienteron
+perienteron to plouk
+plouk to spirituousness
+outimage to plouk
+perienteron to outimage

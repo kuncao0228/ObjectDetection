@@ -1,0 +1,11 @@
+coattail to awakable
+neckband to coattail
+coattail to hexagon
+neckband to hexagon
+awakable to coattail
+hepatophyma to reliance
+spherular to neckband
+spherular to hepatophyma
+awakable to hepatophyma
+neckband to awakable
+hepatophyma to awakable

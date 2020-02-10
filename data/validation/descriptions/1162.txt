@@ -1,0 +1,10 @@
+outfrown to strongly
+sorcery to kidnap
+kidnap to strongly
+sorcery to strongly
+strongly to kidnap
+debromination to sorcery
+kidnap to sorcery
+debromination to kidnap
+strongly to debromination
+debromination to outfrown

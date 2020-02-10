@@ -6,7 +6,7 @@ import numpy as np
 import pdb
 
 
-def createGraph(word_list, file_id):
+def createGraph(word_list, file_id, no_edge_factor):
     createEdgeProbability = .65
     diGraph = Digraph(format='png')
     id_list = []
@@ -17,17 +17,45 @@ def createGraph(word_list, file_id):
     edge_hashList = []
     pair_wordList = []
 
-    #create edges between nodes with some probability
+    # #create edges between nodes with some probability
+    # if len(id_list) > 1:
+    #     for i in range(len(id_list)):
+    #         for j in range(len(id_list)):
+    #             reverse_edgeID = str(j) + str(i)
+    #             current_edgeID = str(i) + str(j)
+    #             words = word_list[i] + " to " + word_list[j]
+    #             if i != j and np.random.uniform() > createEdgeProbability and reverse_edgeID not in edge_hashList and \
+    #             current_edgeID not in edge_hashList:
+    #                 edge_hashList.append(current_edgeID)
+    #                 pair_wordList.append(words)
+    # diGraph.edges(edge_hashList)
+
+
+    totalNodeCount = int(np.ceil(len(word_list) * (len(word_list)-1) * no_edge_factor))
+    # print(totalNodeCount)
+    nodeCount = 0
+        #create edges between nodes with some probability
+
+    coordinateList = []
     if len(id_list) > 1:
         for i in range(len(id_list)):
             for j in range(len(id_list)):
-                reverse_edgeID = str(j) + str(i)
-                current_edgeID = str(i) + str(j)
-                words = word_list[i] + " to " + word_list[j]
-                if i != j and np.random.uniform() > createEdgeProbability and reverse_edgeID not in edge_hashList and \
-                current_edgeID not in edge_hashList:
-                    edge_hashList.append(current_edgeID)
-                    pair_wordList.append(words)
+                element = (i,j)
+                
+                if i != j and element not in coordinateList:
+                    coordinateList.append(element)
+
+    randIndex = np.random.choice(len(coordinateList), totalNodeCount, replace=False)
+    # print(randIndex)
+    connectEdges = np.asarray(coordinateList)[randIndex]
+
+    for i,j in connectEdges:
+        current_edgeID = str(i) + str(j)
+        edge_hashList.append(current_edgeID)
+        words = word_list[i] + " to " + word_list[j]
+        pair_wordList.append(words)
+
+
     diGraph.edges(edge_hashList)
 
     #create plainText

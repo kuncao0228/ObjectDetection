@@ -1,0 +1,15 @@
+lavialite to deputy
+deputy to insimplicity
+lavialite to penciler
+penciler to insimplicity
+lavialite to foxtongue
+Herniaria to insimplicity
+Herniaria to deputy
+insimplicity to foxtongue
+lavialite to insimplicity
+foxtongue to deputy
+deputy to lavialite
+foxtongue to penciler
+insimplicity to lavialite
+foxtongue to insimplicity
+deputy to foxtongue

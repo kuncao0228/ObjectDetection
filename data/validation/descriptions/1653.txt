@@ -1,0 +1,11 @@
+reree to janissary
+reree to unmaintained
+unmaintained to presbyteress
+immeritous to presbyteress
+immeritous to supercrescent
+immeritous to unmaintained
+unmaintained to reree
+supercrescent to presbyteress
+reree to presbyteress
+janissary to immeritous
+immeritous to janissary

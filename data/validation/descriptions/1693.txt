@@ -1,0 +1,11 @@
+prius to ingress
+prius to ephemerid
+ephemerid to Balmarcodes
+ephemerid to gypsywort
+Balmarcodes to gypsywort
+ephemerid to prius
+selenology to scintillize
+ingress to scintillize
+scintillize to gypsywort
+gypsywort to Balmarcodes
+Balmarcodes to selenology

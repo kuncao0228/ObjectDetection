@@ -1,0 +1,10 @@
+hangman to pithiness
+crystallize to pithiness
+hangman to crystallize
+crystallize to weatherhead
+discomycete to crystallize
+hangman to discomycete
+crystallize to discomycete
+hangman to weatherhead
+pithiness to discomycete
+weatherhead to pithiness

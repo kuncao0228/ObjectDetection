@@ -1,0 +1,15 @@
+ampere to diaglyphic
+unmarriable to ampere
+overstitch to unmarriable
+pickaninny to overstitch
+renvoy to diaglyphic
+diaglyphic to pickaninny
+unmarriable to renvoy
+overstitch to diaglyphic
+diaglyphic to unmarriable
+overstitch to pickaninny
+overstitch to ampere
+diaglyphic to overstitch
+renvoy to ampere
+ampere to overstitch
+unmarriable to pickaninny

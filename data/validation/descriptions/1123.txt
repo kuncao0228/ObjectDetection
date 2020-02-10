@@ -1,0 +1,10 @@
+Heterodonta to distomatous
+distomatous to underthrob
+Heterodonta to underthrob
+underthrob to distomatous
+polyarthritic to interosculant
+interosculant to Heterodonta
+polyarthritic to underthrob
+distomatous to interosculant
+interosculant to distomatous
+interosculant to underthrob

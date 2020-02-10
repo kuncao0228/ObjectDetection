@@ -1,0 +1,11 @@
+staiver to smoky
+spitball to Chico
+repression to reprovoke
+smoky to periodontoclasia
+periodontoclasia to staiver
+periodontoclasia to spitball
+Chico to staiver
+Chico to smoky
+reprovoke to staiver
+repression to staiver
+staiver to reprovoke

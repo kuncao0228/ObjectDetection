@@ -1,0 +1,15 @@
+Putorius to cocculiferous
+curatorium to cocculiferous
+stethometer to cocculiferous
+curatorium to Putorius
+stethometer to Putorius
+indicible to stethometer
+indicible to Putorius
+capitalist to curatorium
+capitalist to stethometer
+curatorium to stethometer
+curatorium to indicible
+indicible to cocculiferous
+Putorius to indicible
+Putorius to capitalist
+stethometer to capitalist

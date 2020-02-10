@@ -1,0 +1,10 @@
+ecoid to Ornithosauria
+Cyperus to unprovidable
+ecoid to unprovidable
+ecoid to maceration
+Cyperus to ecoid
+unprovidable to maceration
+unprovidable to ecoid
+maceration to unprovidable
+unprovidable to Ornithosauria
+Cyperus to maceration

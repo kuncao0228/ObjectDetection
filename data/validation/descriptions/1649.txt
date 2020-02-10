@@ -1,0 +1,11 @@
+salifiable to subdorsal
+podded to Lampsilus
+subdorsal to salifiable
+locustid to Lampsilus
+podded to salifiable
+incaution to nabobish
+podded to nabobish
+subdorsal to nabobish
+Lampsilus to locustid
+podded to locustid
+nabobish to Lampsilus

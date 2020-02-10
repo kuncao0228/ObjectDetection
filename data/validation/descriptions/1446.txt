@@ -1,0 +1,15 @@
+parry to Chrysobalanaceae
+Chrysobalanaceae to unrefused
+Protoceratops to unicelled
+unicelled to Protoceratops
+parry to sabadinine
+unicelled to sabadinine
+sabadinine to Chrysobalanaceae
+unicelled to parry
+unicelled to unrefused
+Protoceratops to parry
+parry to Protoceratops
+Protoceratops to Chrysobalanaceae
+Protoceratops to sabadinine
+sabadinine to parry
+unrefused to sabadinine

@@ -1,0 +1,10 @@
+ethylenoid to tornadic
+triglyceryl to tornadic
+tornadic to variator
+ethylenoid to variator
+superdistribution to triglyceryl
+ethylenoid to superdistribution
+superdistribution to tornadic
+tornadic to ethylenoid
+variator to ethylenoid
+triglyceryl to superdistribution

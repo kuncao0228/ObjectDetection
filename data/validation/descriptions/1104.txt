@@ -1,0 +1,10 @@
+marigraph to thingman
+ungoverned to chauvinism
+thingman to marigraph
+chauvinism to sublecturer
+sublecturer to thingman
+sublecturer to ungoverned
+marigraph to chauvinism
+sublecturer to marigraph
+marigraph to ungoverned
+sublecturer to chauvinism

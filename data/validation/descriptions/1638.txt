@@ -1,0 +1,11 @@
+semidomestic to Polemoniales
+pardonmonger to horde
+Carchariidae to pardonmonger
+horde to Anatidae
+Anatidae to Vaalpens
+Polemoniales to Anatidae
+Anatidae to horde
+Vaalpens to semidomestic
+Polemoniales to pardonmonger
+pardonmonger to semidomestic
+semidomestic to horde

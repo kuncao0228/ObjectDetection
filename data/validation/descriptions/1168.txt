@@ -1,0 +1,10 @@
+parsonese to peplos
+flanque to macruran
+macruran to peplos
+peplos to macruran
+fillip to macruran
+macruran to parsonese
+macruran to flanque
+fillip to parsonese
+flanque to peplos
+flanque to fillip

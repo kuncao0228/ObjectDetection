@@ -1,0 +1,3 @@
+geodist to eidograph
+eidograph to geodist
+calyptro to geodist

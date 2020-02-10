@@ -1,0 +1,6 @@
+relime to nonregarding
+uparch to nonregarding
+nonregarding to uparch
+relime to uparch
+recorruption to nonregarding
+nonregarding to recorruption

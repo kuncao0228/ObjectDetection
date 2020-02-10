@@ -1,0 +1,10 @@
+northernly to birdie
+conjunctional to birdie
+furoic to conjunctional
+northernly to conjunctional
+reitbuck to birdie
+northernly to reitbuck
+furoic to reitbuck
+birdie to northernly
+furoic to birdie
+reitbuck to conjunctional
