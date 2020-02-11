@@ -371,17 +371,10 @@ def plot_img_and_mask(img, mask, fn):
     # plt.show()
     for iter, island in enumerate(islands_box_dilated+islands_ellipse_dilated):
         (left_coord,right_coord, top_coord, bot_coord) = island
-        width = right_coord - left_coord
-        height = bot_coord - top_coord
         # print(island)
-<<<<<<< HEAD
-        box = letters[top_coord+int(0.2*height):bot_coord-int(0.2*height),left_coord+int(0.2*width):right_coord-int(0.2*width)]
-=======
         box = img[top_coord+15:bot_coord-15,left_coord+15:right_coord-15]
->>>>>>> 760e4480a09661fd4afdec4fec5025f968ca915b
         box = cv2.resize(box,(500,255))
         plt.imsave("../ocr/demo_image/" + str(iter) + ".png",box,cmap='gray')
-
 
     os.system("python ../ocr/demo.py --Transformation TPS --FeatureExtraction ResNet --SequenceModeling \
                 BiLSTM --Prediction Attn --image_folder ../ocr/demo_image/ --saved_model ../ocr/TPS-ResNet-BiLSTM-Attn.pth")
@@ -431,18 +424,9 @@ def plot_img_and_mask(img, mask, fn):
             node_edge_copy[point[0],point[1]] = 127
         print(iter)
         print(islands_numbered)
-<<<<<<< HEAD
-    ax[i].imshow(edges,cmap='gray')
-    ax[i+1].imshow(node_edge_copy,cmap='gray')
-
-    # plt.xticks([]), plt.yticks([])
-    plt.show()
-
-=======
     ax[i+1].imshow(edges,cmap='gray')
     ax[i].imshow(node_edge_copy,cmap='gray')
     # plt.show()
->>>>>>> 760e4480a09661fd4afdec4fec5025f968ca915b
     #Check the direction of the connection between 2 nodes
 
 
