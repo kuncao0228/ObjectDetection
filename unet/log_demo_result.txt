@@ -1,0 +1,12 @@
+../ocr/demo_image/0.png   f                        
+../ocr/demo_image/1.png   a                        
+../ocr/demo_image/2.png   b                        
+../ocr/demo_image/3.png   i                        
+../ocr/demo_image/4.png   d                        
+../ocr/demo_image/5.png   h                        
+../ocr/demo_image/6.png   g                        
+../ocr/demo_image/7.png   bb                       
+../ocr/demo_image/8.png   i                        
+../ocr/demo_image/9.png   i                        
+../ocr/demo_image/10.png  ff                       
+../ocr/demo_image/11.png  i                        
