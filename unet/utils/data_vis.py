@@ -154,21 +154,23 @@ def dfs_island_check(mask, img, island, islands, in_type):
         # If a adjacent has not been visited, then push it
         # to the stack.
         islands_copy = islands.copy()
-        islands_copy.remove(island)
-        box_radius = 7
+        # islands_copy.remove(island)
+        box_radius = 10
 
         if in_type=='ellipse':
-            elem_in_islands, __ = check_element(s[0],s[1], [island], radius = 1.1, in_type='box')
+            elem_in_island, __ = check_element(s[0],s[1], [island], radius = 1.2, in_type='box')
         if in_type=='box':
-            elem_in_islands, __ = check_element(s[0],s[1], [island], radius = 1.1, in_type='ellipse')
-        if elem_in_islands:
+            elem_in_island, __ = check_element(s[0],s[1], [island], radius = 1.2, in_type='ellipse')
+        if elem_in_island:
+            if pixel_out:
+                pixel_out = False
             for k in range(8):
                 if isSafe(mask, s[0] + rowNbr[k], s[1] + colNbr[k], visited):
-                    elem_in_islands, island_found = check_element(s[0] + rowNbr[k],s[1] + colNbr[k], islands_copy, radius=1.1, in_type=in_type)
+                    elem_in_islands, island_found = check_element(s[0] + rowNbr[k],s[1] + colNbr[k], islands_copy, radius=1.2, in_type=in_type)
                     # Add to stack if not reached another node
                     if not elem_in_islands:
                         stack.append(((s[0] + rowNbr[k], s[1] + colNbr[k]),[rowNbr[k],colNbr[k]]))
-                        points.append((s[0] + rowNbr[k], s[1] + colNbr[k]))
+                        # points.append((s[0] + rowNbr[k], s[1] + colNbr[k]))
                     #Check if island found has already been reached though dfs
                     elif island_found not in islands_connected:
                         print("Nothing is impossible")
@@ -179,11 +181,11 @@ def dfs_island_check(mask, img, island, islands, in_type):
                         box_connection.append((s[0]+ rowNbr[k]-box_radius,s[0]+rowNbr[k]+box_radius
                         ,s[1]+ colNbr[k]-box_radius,s[1]+ colNbr[k]+box_radius))
                 if isSafe(mask, s[0] + 2*rowNbr[k], s[1] + 2*colNbr[k], visited):
-                    elem_in_islands, island_found = check_element(s[0] + 2*rowNbr[k],s[1] + 2*colNbr[k], islands_copy, radius=1.1, in_type=in_type)
+                    elem_in_islands, island_found = check_element(s[0] + 2*rowNbr[k],s[1] + 2*colNbr[k], islands_copy, radius=1.2, in_type=in_type)
                     # Add to stack if not reached another node
                     if not elem_in_islands:
                         stack.append(((s[0] + 2*rowNbr[k], s[1] + 2*colNbr[k]),[2*rowNbr[k],2*colNbr[k]]))
-                        points.append((s[0] + 2*rowNbr[k], s[1] + 2*colNbr[k]))
+                        # points.append((s[0] + 2*rowNbr[k], s[1] + 2*colNbr[k]))
                     #Check if island found has already been reached though dfs
                     elif island_found not in islands_connected:
                         print("Nothing is impossible")
@@ -198,11 +200,11 @@ def dfs_island_check(mask, img, island, islands, in_type):
                 pixel_out = True
                 pixel_num_out = np.count_nonzero(img[s[0]-box_radius:s[0]+box_radius\
                 ,s[1]-box_radius:s[1]+box_radius])
-                box_connection.append((s[0]-box_radius,s[0]+box_radius
-                ,s[1]-box_radius,s[1]+box_radius))
+                box_temp = (s[0]-box_radius,s[0]+box_radius
+                ,s[1]-box_radius,s[1]+box_radius)
             for k in range(8):
                 if isSafe(mask, s[0] + rowNbr[k], s[1] + colNbr[k], visited):
-                    elem_in_islands, island_found = check_element(s[0] + rowNbr[k],s[1] + colNbr[k], islands_copy, radius =1.1, in_type=in_type)
+                    elem_in_islands, island_found = check_element(s[0] + rowNbr[k],s[1] + colNbr[k], islands_copy, radius =1.2, in_type=in_type)
                     # Add to stack if not reached another node
                     if not elem_in_islands:
                         stack.append(((s[0] + rowNbr[k], s[1] + colNbr[k]),[rowNbr[k],colNbr[k]]))
@@ -215,12 +217,13 @@ def dfs_island_check(mask, img, island, islands, in_type):
                         if pixel_num_out<np.count_nonzero(img[s[0]+ rowNbr[k]-box_radius:s[0]+rowNbr[k]+box_radius
                         ,s[1]+ colNbr[k]-box_radius:s[1]+ colNbr[k]+box_radius]):
                             num_pixels_connection.append(1)
+                            box_connection.append(box_temp)
                             box_connection.append((s[0]+ rowNbr[k]-box_radius,s[0]+rowNbr[k]+box_radius
                             ,s[1]+ colNbr[k]-box_radius,s[1]+ colNbr[k]+box_radius))
                             islands_connected.append(island_found)
                         break
                 if isSafe(mask, s[0] + 2*rowNbr[k], s[1] + 2*colNbr[k], visited):
-                    elem_in_islands, island_found = check_element(s[0] + 2*rowNbr[k],s[1] + 2*colNbr[k], islands_copy, radius = 1.1, in_type=in_type)
+                    elem_in_islands, island_found = check_element(s[0] + 2*rowNbr[k],s[1] + 2*colNbr[k], islands_copy, radius = 1.2, in_type=in_type)
                     # Add to stack if not reached another node
                     if not elem_in_islands:
                         stack.append(((s[0] + 2*rowNbr[k], s[1] + 2*colNbr[k]),[2*rowNbr[k],2*colNbr[k]]))
@@ -234,6 +237,7 @@ def dfs_island_check(mask, img, island, islands, in_type):
                             islands_connected.append(island_found)
                             # Get number of pixels in a box around the connection point
                             num_pixels_connection.append(1)
+                            box_connection.append(box_temp)
                             box_connection.append((s[0]+ 2*rowNbr[k]-box_radius,s[0]+2*rowNbr[k]+box_radius
                             ,s[1]+ 2*colNbr[k]-box_radius,s[1]+ 2*colNbr[k]+box_radius))
                         break
@@ -314,6 +318,14 @@ def plot_img_and_mask(img, mask, fn):
     mask_ellipse = cv2.resize(mask_ellipse,(img.shape[1],img.shape[0]))*255
     mask_box_erode = cv2.resize(mask_box_erode,(img.shape[1],img.shape[0]))*255
     mask_ellipse_erode = cv2.resize(mask_ellipse_erode,(img.shape[1],img.shape[0]))*255
+
+    mask_box_erode = cv2.morphologyEx(mask_box_erode, cv2.MORPH_CLOSE, kernel_erosion)
+    mask_ellipse_erode = cv2.morphologyEx(mask_ellipse_erode, cv2.MORPH_CLOSE, kernel_erosion)
+
+    ax[i].imshow(mask_box_erode,cmap='gray')
+    ax[i+1].imshow(mask_ellipse_erode,cmap='gray')
+
+    # plt.xticks([]), plt.yticks([])
     # Get all words
     letters = np.uint8((mask_ellipse_erode+mask_box_erode)*((255-img)/255))
     # letters = cv2.dilate(letters,kernel)
@@ -322,6 +334,8 @@ def plot_img_and_mask(img, mask, fn):
     mask_box_dilate = cv2.dilate(mask_box, kernel_erosion, iterations=2)
     mask_box_dilate = cv2.resize(mask_box_dilate,(img.shape[1],img.shape[0]))
     islands_box_dilated = countIslands(mask_box_dilate, threshold)
+
+
 
     mask_ellipse_dilate = cv2.dilate(mask_ellipse, kernel_erosion, iterations=2)
     mask_ellipse_dilate = cv2.resize(mask_ellipse_dilate,(img.shape[1],img.shape[0]))
@@ -358,7 +372,7 @@ def plot_img_and_mask(img, mask, fn):
     for iter, island in enumerate(islands_box_dilated+islands_ellipse_dilated):
         (left_coord,right_coord, top_coord, bot_coord) = island
         # print(island)
-        box = letters[top_coord+15:bot_coord-15,left_coord+15:right_coord-15]
+        box = img[top_coord+15:bot_coord-15,left_coord+15:right_coord-15]
         box = cv2.resize(box,(500,255))
         plt.imsave("../ocr/demo_image/" + str(iter) + ".png",box,cmap='gray')
 
@@ -389,8 +403,12 @@ def plot_img_and_mask(img, mask, fn):
             in_type = "box"
         else:
             in_type = "ellipse"
-        islands_connected, num_pixels_connection, box_connection, points = dfs_island_check(node_edge\
-                    , edges, island, islands_box_copy+islands_ellipse_copy, in_type)
+        if in_type == "box":
+            islands_connected, num_pixels_connection, box_connection, points = dfs_island_check(node_edge\
+                        , edges, island, islands_ellipse_copy, in_type)
+        else:
+            islands_connected, num_pixels_connection, box_connection, points = dfs_island_check(node_edge\
+                        , edges, island, islands_box_copy, in_type)
         islands_numbered = convert_number(islands_connected,islands_box_copy+islands_ellipse_copy)
         for vertex,numbered in zip(islands_numbered, num_pixels_connection):
             graph[iter][vertex] = numbered
@@ -400,18 +418,15 @@ def plot_img_and_mask(img, mask, fn):
         for box in box_connection:
             print(box)
             (x1,x2,y1,y2) = box
-            node_edge_copy = cv2.rectangle(node_edge_copy,(y1,x1),(y2,x2),color)
-        if iter==3:
-            for point in points:
-                node_edge_copy[point[0],point[1]] = 127
+            edges = cv2.rectangle(edges,(y1,x1),(y2,x2),color)
+        # if iter==3:
+        for point in points:
+            node_edge_copy[point[0],point[1]] = 127
         print(iter)
         print(islands_numbered)
-    ax[i].imshow(edges,cmap='gray')
-    ax[i+1].imshow(node_edge_copy,cmap='gray')
-
-    # plt.xticks([]), plt.yticks([])
+    ax[i+1].imshow(edges,cmap='gray')
+    ax[i].imshow(node_edge_copy,cmap='gray')
     # plt.show()
-
     #Check the direction of the connection between 2 nodes
 
 

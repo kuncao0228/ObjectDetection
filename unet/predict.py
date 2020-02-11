@@ -16,6 +16,7 @@ from utils.dataset import BasicDataset
 import cv2
 import glob
 from tqdm import tqdm
+import traceback
 
 
 def predict_img(net,
@@ -142,14 +143,14 @@ if __name__ == "__main__":
 
         logging.info("Visualizing results for image {}, close to continue ...".format(fn))
         print (args.petri)
-        try:
-            if args.petri:
-                correct += plot_img_and_mask(img1, mask, fn)
-            else:
-                print("Here")
-                stats.append(get_stats(img1,mask,fn))
-        except:
-            continue
+        # try:
+        if args.petri:
+            correct += plot_img_and_mask(img1, mask, fn)
+        else:
+            print("Here")
+            stats.append(get_stats(img1,mask,fn))
+        # except:
+        #     continue
     true_positives = 0
     total_positives = 0
     predicted_positives = 0
@@ -169,9 +170,9 @@ if __name__ == "__main__":
     file = open("results/"+filename, 'w')
 
 
-    file.write("Accuracy:"+str(100*correct/(i+1))+"%")
-    file.write("Precision:"+str(100*true_positives/(predicted_positives))+"%")
-    file.write("Recall:"+str(100*true_positives/(total_positives))+"%")
-    file.write("Ocr_accuracy:"+str(100*over_ocr_true/(over_ocr_total))+"%")
+    file.write("Accuracy:"+str(100*correct/(i+1))+"%\n")
+    file.write("Precision:"+str(100*true_positives/(predicted_positives))+"%\n")
+    file.write("Recall:"+str(100*true_positives/(total_positives))+"%\n")
+    file.write("Ocr_accuracy:"+str(100*over_ocr_true/(over_ocr_total))+"%\n")
 
     file.close()
